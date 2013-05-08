@@ -118,6 +118,24 @@
                 android:gravity="center"
                 android:text="取消" />
         </LinearLayout>
+        
+        
     </RelativeLayout>
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip">
 
+         <TextView
+             android:id="@+id/login_notifytext"
+             android:layout_marginLeft="13sp"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:background="#FFFFFF"
+             android:text="请登录"
+             android:textColor="#000000"
+             android:textSize="13sp" />
+     
+     </RelativeLayout>
 </LinearLayout>

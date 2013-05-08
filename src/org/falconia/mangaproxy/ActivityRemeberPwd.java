@@ -9,7 +9,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 import android.os.StrictMode;
 import android.text.Editable;
 import android.text.InputType;
@@ -21,6 +23,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.falconia.mangaproxy.ActivityGenreList.IntentHandler;
@@ -54,13 +57,15 @@ public class ActivityRemeberPwd extends Activity {
 	EditText passwordET;
 	Button logBT;
 	Button returnBT;
-
+    TextView loginText;
 	CheckBox savePasswordCB;
 	SharedPreferences sp;
 	String cardNumStr;
 	String passwordStr;
 	private Site mSite;
 	private int mSiteId;
+	private static Handler updateTextHandler = null;
+	
 	
 	public int getSiteId() {
 		return mSiteId;
@@ -78,13 +83,17 @@ public class ActivityRemeberPwd extends Activity {
 		new Thread(downloadRun).start();  
 	}
 	
-	private void showSccuessMessage(){
-		Toast.makeText(this, "登陆成功，正在获取用户数据……", Toast.LENGTH_SHORT).show();
+	private void showMessage(String message){
+	    Message msg = new Message();  
+	    Bundle bundle = new Bundle();   
+	    bundle.putString("str",message); 
+	    msg.setData(bundle);
+	    ActivityRemeberPwd.updateTextHandler.sendMessage(msg);
+	    
+		//AppUtils.popupMessage(ActivityRemeberPwd.this,"登陆成功，正在获取用户数据……");
 	}
 	
-	private void showFailedMessage(){
-		Toast.makeText(this, "密码错误，请重新输入", Toast.LENGTH_SHORT).show();
-	}
+
 	
 	private void startActivityGenreList(){
 		if (mSite.hasGenreList()) {
@@ -115,14 +124,14 @@ public class ActivityRemeberPwd extends Activity {
 					sp.edit().putString(cardNumStr, "").commit();
 				}
 				AppUtils.logV(this, "login Sucessfully!");
-				showSccuessMessage();
+				showMessage("登陆成功，正在获取用户数据……");
 				startActivityGenreList();
 
 			
 			}
 			else
 			{
-				showFailedMessage();
+				showMessage("密码错误，请重新输入");
 				AppUtils.logV(this, "login failed!");
 			}
 		}
@@ -140,6 +149,7 @@ public class ActivityRemeberPwd extends Activity {
 		setContentView(R.layout.activity_login);
 		cardNumAuto = (AutoCompleteTextView) findViewById(R.id.cardNumAuto);
 		passwordET = (EditText) findViewById(R.id.passwordET);
+		loginText = (TextView) findViewById(R.id.login_notifytext);
 		logBT = (Button) findViewById(R.id.logBT);
 		returnBT = (Button) findViewById(R.id.returnBT);
 		sp = this.getSharedPreferences("usernameFile", MODE_PRIVATE);
@@ -152,14 +162,16 @@ public class ActivityRemeberPwd extends Activity {
 		// 显示密码为InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD，也就是0x91
 		if (Plugins.getPlugin(getSiteId()).needLogin()== false || Plugins.getPlugin(getSiteId()).getCookies().length()>0)
 		{
-			if (mSite.hasGenreList()) {
-				ActivityGenreList.IntentHandler.startActivityGenreList(ActivityRemeberPwd.this, mSiteId);
-			} else {
-				ActivityMangaList.IntentHandler.startActivityAllMangaList(ActivityRemeberPwd.this, mSiteId);
-			}
-			this.finish();
+			startActivityGenreList();
 		}
-
+		this.updateTextHandler = new Handler()
+         {
+            @Override
+            public void handleMessage(Message msg)
+            {
+               loginText.setText(msg.getData().getString("str"));
+            }
+        };
 		
 		cardNumAuto.addTextChangedListener(new TextWatcher() {
 
@@ -220,7 +232,7 @@ public class ActivityRemeberPwd extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-                
+			   showMessage("正在登陆，请稍后...");
                startLoginThread();
 
 			}

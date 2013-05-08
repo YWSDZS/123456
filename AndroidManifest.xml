@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="900" android:versionName="1.4.16" package="org.falconia.mangaproxyex">
+	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="10" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+		android:theme="@android:style/Theme.Black" android:name="org.falconia.mangaproxy.App">
+		<activity android:name="org.falconia.mangaproxy.ActivityInit" android:label="@string/app_name"
+			android:theme="@android:style/Theme.Black" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="org.falconia.mangaproxy.ActivityFavoriteList" android:theme="@android:style/Theme.Black"
+			android:screenOrientation="portrait" />
+		<activity android:name="org.falconia.mangaproxy.ActivityGenreList" android:theme="@android:style/Theme.Black"
+			android:screenOrientation="portrait" />
+		<activity android:name="org.falconia.mangaproxy.ActivityMangaList" android:theme="@android:style/Theme.Black"
+			android:screenOrientation="portrait" />
+		<activity android:name="org.falconia.mangaproxy.ActivityChapterList" android:theme="@android:style/Theme.Black"
+			android:screenOrientation="portrait" />
+		<activity android:name="org.falconia.mangaproxy.ActivityRemeberPwd" android:theme="@android:style/Theme.Black"
+			android:screenOrientation="portrait" />
+		<activity android:name="org.falconia.mangaproxy.ActivityChapter"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="org.falconia.mangaproxy.ActivityPreference" android:theme="@android:style/Theme.Black"
+			android:screenOrientation="behind" />
+		<activity android:name="org.falconia.mangaproxy.ActivityChangelog" android:theme="@android:style/Theme.Black"
+			android:screenOrientation="portrait" />
+		<activity android:name="org.falconia.mangaproxy.CrashActivity" android:theme="@android:style/Theme.Black"
+			android:screenOrientation="portrait" />
+		<activity android:name="org.falconia.mangaproxy.DebugActivity"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+	</application>
+</manifest>

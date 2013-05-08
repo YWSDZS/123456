@@ -1,0 +1,195 @@
+Manga Proxy - by FalconIA
+http://code.google.com/p/mangaproxy/
+
+
+浏览页操作方式：
+下一页：　图片处在左边缘时向右滑动
+　　　　　或右下角按钮
+上一页：　图片处在右边缘时向左滑动
+　　　　　或左下角按钮
+缩放：　　两点触控
+缩放复位：双击屏幕
+初始缩放：菜单中选择
+显示信息：单击屏幕
+
+加入收藏：点击漫画列表漫画右侧的五角星
+
+加入收藏后：
+收藏列表漫画有更新时章节为绿色
+章节列表自动指向上次浏览的章节
+章节页面自动跳转到上次浏览的页面
+
+
+Version 1.4.15
+==============
+- [Plugin HHcomic] Fix ChapterList / ChapterPages.
+Version 1.4.14
+==============
+- [Plugin DM5] Fix base URL to tel.dm5.com.
+- [Plugin HHcomic] Remove support of search.
+Version 1.4.13
+==============
+- [Plugin DM5] Fix pages cannot be downloaded, caused by PageRedirectUrl.
+- [Plugin HHcomic] Fix GenreList.
+Version 1.4.12
+==============
+- [Plugin DM5] Fix ChapterList.
+Version 1.4.11
+==============
+- [Plugin DM5] Fix ChapterList.
+Version 1.4.10
+==============
+- [Plugin HHcomic] Fix some search results cannot process.
+- Fix to display 'No items' when got a empty search result.
+- Fix crash sometimes when refresh MangaList.
+- Change menu item of 'Refresh' in Favorite list to 'Update'.
+
+Version 1.4.9
+=============
+- [Plugin DM5] Fix pages cannot be downloaded, caused by PageRedirectUrl.
+- [Plugin 99770] Fix base URL to 99770.cc.
+- [Plugin HHcomic] Fix base URL to www.hhcomic.com.
+
+Version 1.4.8
+=============
+- [Plugin 99770] Fix some chapters cannot be downloaded.
+
+Version 1.4.7
+=============
+- [Plugin DM5] Fix some chapters cannot be processed.
+- [Plugin HHcomic] Add new Plugin HHcomic. 
+
+Version 1.4.6
+=============
+- [Plugin 99770] Add support of Search.
+- [Plugin DM5] Add support of Search.
+
+Version 1.4.5
+=============
+- [Plugin 99770] Change mh.99770.cc to www.99770.cc.
+- Fix gesture of changing page.
+
+Version 1.4.4.1
+===============
+- Fix mistaken removal of changing page effect.
+
+Version 1.4.4
+=============
+- [Plugin DM5] Fix ChapterList / ChapterPages.
+- Fix crash when press next page in genre manga list.
+- Change max cached images to 400.
+
+Version 1.4.3
+=============
+- Fix crash when update favorite manga list.
+- Fix crash when cancel source processing.
+
+Version 1.4.2
+=============
+- [Plugin 99770] Fix AllMangaList / ChapterList / ChapterPages.
+- [Plugin DM5] Fix GenreList / ChapterPages.
+- Improve chapter list to jump to newer one of last read chapter.
+- Fix error of changing page to page 0 in page view.
+- Remove crash window.
+
+Version 1.4.1
+=============
+- [Plugin 99770] Fix Genre of 'Most Hits'.
+
+Version 1.4.0
+=============
+- Fix joinUrl method.
+- Fix cannot update database after restart active.
+- Fix cannot change page to uncached page.
+- Update UI of progress bar when refresh favorite list.
+
+Version 1.3.1
+=============
+- Fix DNS cache issue.
+- Fix lag of downloading redirected images.
+
+Version 1.3.0
+=============
+- Update plugin of 99770.
+
+Version 1.2.7.1 (Beta)
+======================
+- Fix download URL of latest version.
+
+Version 1.2.7 (Beta)
+====================
+- Fix crash when refresh empty favorite list.
+
+Version 1.2.6 (Beta)
+====================
+- Fix display wrong page index in page view.
+
+Version 1.2.5 (Beta)
+====================
+- Fix the lag before changing page in page view.
+- Fix cannot start animation when page is loading.
+- Modified method when fail to download images.
+- Modified display of update time in Favorite list.
+- Display and format update time in Favorite list.
+- Decode JPEG File without End of Image.
+- Fix crash when load invalid image.
+- Fix to show Crash Log.
+
+Version 1.2.4 (Beta)
+====================
+- Fix the delay before changing page in page view.
+- Modified to update max page to database when change page.
+- Fix page view connot touch after resume.
+
+Version 1.2.3 (Beta)
+====================
+- Fix connot retry to download if cache exists.
+- Fix error when URL contains port.
+- [Plugin 99770] Fix URL of image.
+- Fix UI error when cancelled downloading next page of MangaList.
+- Fix crash on retrying download Chapter data of Page 0.
+- Reactive SDCard check.
+- [Plugin DM5] Remove HTML tag in author of Manga in MangaList.
+
+Version 1.2.2 (Beta)
+====================
+- Reduce leak of memory.
+
+Version 1.2.1 (Beta)
+====================
+- Warning when Out of Memory (try to fix later).
+
+Version 1.2 (Beta)
+==================
+- Fix URL with Chinese character.
+
+Version 1.1 (Beta)
+==================
+- Auto update favorite when start if set.
+- New function to check new version.
+- Change auto-orientation from sensor to user.
+- Fix crash of orientation when loading image.
+
+Version 1.0 (Beta)
+==================
+- New plugin for site DM5(www.dm5.com).
+- New Favorite Management for bookmarking and checking update.
+- New option menu.
+- Fix page change issue in ActivityChapter.
+- Update databse structure.
+
+Version 0.5 (Preview)
+=====================
+- New Favorite Bookmark (ony for Manga).
+
+Version 0.4 (Preview)
+=====================
+- New Chapter Page Viewer.
+
+Version 0.3 (Preview)
+=====================
+- Fix the error of HttpURLConnection when Referer is null in old SDK.
+
+Version 0.2 (Preview)
+=====================
+- Test only.

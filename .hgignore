@@ -1,0 +1,27 @@
+syntax: glob
+.settings/.svn/all-wcprops
+.settings/.svn/dir-prop-base
+.settings/.svn/entries
+.settings/.svn/format
+.settings/.svn/text-base/org.eclipse.core.resources.prefs.svn-base
+bin
+assets/.svn
+gen
+res/.svn
+res/anim/.svn
+res/drawable-hdpi/.svn
+res/drawable/.svn
+res/layout-finger/.svn
+res/layout/.svn
+res/menu/.svn
+res/values/.svn
+src/com/.svn
+src/com/sonyericsson/.svn
+src/com/sonyericsson/util/.svn
+src/com/sonyericsson/zoom/.svn
+src/org/falconia/mangaproxy/.svn
+src/org/falconia/mangaproxy/data/.svn
+src/org/falconia/mangaproxy/plugin/.svn
+src/org/falconia/mangaproxy/task/.svn
+src/org/falconia/mangaproxy/ui/.svn
+.svn

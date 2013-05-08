@@ -16,6 +16,8 @@ import org.falconia.mangaproxy.task.SourceProcessTask;
 import org.falconia.mangaproxy.ui.BaseHeadersAdapter;
 import org.falconia.mangaproxyex.R;
 
+import com.loopj.android.image.SmartImageView;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -34,8 +36,10 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.net.Uri;
 
 public final class ActivityMangaList extends ActivityBase implements OnClickListener {
 
@@ -247,6 +251,7 @@ public final class ActivityMangaList extends ActivityBase implements OnClickList
 			public TextView tvDetails;
 			public TextView tvCompleted;
 			public CheckBox cbFavorite;
+			public SmartImageView IvImage;
 		}
 
 		private LayoutInflater mInflater;
@@ -285,6 +290,7 @@ public final class ActivityMangaList extends ActivityBase implements OnClickList
 				holder.tvDetails = (TextView) convertView.findViewById(R.id.mtvDetails);
 				holder.tvCompleted = (TextView) convertView.findViewById(R.id.mtvCompleted);
 				holder.cbFavorite = (CheckBox) convertView.findViewById(R.id.mcbFavorite);
+				holder.IvImage = (SmartImageView) convertView.findViewById(R.id.mImage);
 				holder.cbFavorite.setOnClickListener(ActivityMangaList.this);
 				convertView.setTag(holder);
 			} else {
@@ -303,6 +309,7 @@ public final class ActivityMangaList extends ActivityBase implements OnClickList
 			holder.tvCompleted.setVisibility(manga.isCompleted ? View.VISIBLE : View.GONE);
 			holder.cbFavorite.setChecked(manga.isFavorite);
 			holder.cbFavorite.setTag(manga);
+			holder.IvImage.setImageUrl(manga.thumbUrl);
 
 			return convertView;
 		}

@@ -8,6 +8,7 @@ import org.falconia.mangaproxy.App;
 import org.falconia.mangaproxy.plugin.IPlugin;
 import org.falconia.mangaproxy.plugin.Plugins;
 
+
 import android.graphics.Bitmap;
 import android.text.TextUtils;
 
@@ -64,6 +65,7 @@ public final class Manga implements Serializable {
 	public String author;
 	public String chapterDisplayname;
 	public String details;
+	public String thumbUrl = "";
 
 	private String mDetailsTemplate;
 
@@ -92,6 +94,7 @@ public final class Manga implements Serializable {
 		this.displayname = displayname;
 		this.section = section;
 		this.siteId = siteId;
+		
 	}
 
 	public int getId() {

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="dummy_pic_md5">
+		<item>2623373D287D0190036EDEC0CFEECA17</item>
+	</string-array>
+	<string-array name="dummy_pic_crc32">
+		<item>E4DDB658</item>
+	</string-array>
+	<string-array name="orientations">
+		<item>@string/menu_item_orientation_user</item>
+		<item>@string/menu_item_orientation_portrait</item>
+		<item>@string/menu_item_orientation_landscape</item>
+	</string-array>
+	<string-array name="orientations_values">
+		<item>2</item>
+		<item>1</item>
+		<item>0</item>
+	</string-array>
+	<string-array name="zoom_mode">
+		<item>@string/menu_item_zoom_fit_width_or_height</item>
+		<item>@string/menu_item_zoom_fit_width_auto_split</item>
+		<item>@string/menu_item_zoom_fit_width</item>
+		<item>@string/menu_item_zoom_fit_height</item>
+		<item>@string/menu_item_zoom_fit_screen</item>
+	</string-array>
+	<string-array name="zoom_mode_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+	</string-array>
+	<string-array name="preload">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+	</string-array>
+	<string-array name="preload_values">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+	</string-array>
+</resources>

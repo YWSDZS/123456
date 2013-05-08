@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">漫画代理EX</string>
+	<string name="genre">分类</string>
+	<string name="genre_all">全部漫画</string>
+	<string name="menu_item_source">来源</string>
+	<string name="menu_item_refresh">刷新</string>
+	<string name="menu_item_update">更新</string>
+	<string name="menu_item_zoom">缩放</string>
+	<string name="menu_item_zoom_fit_width_or_height">适合宽度或高度</string>
+	<string name="menu_item_zoom_fit_width_auto_split">适合宽度（自动开页）</string>
+	<string name="menu_item_zoom_fit_width">适合宽度</string>
+	<string name="menu_item_zoom_fit_height">适合高度</string>
+	<string name="menu_item_zoom_fit_screen">适合屏幕</string>
+	<string name="menu_item_orientation_user">跟随系统</string>
+	<string name="menu_item_orientation_portrait">锁定竖屏</string>
+	<string name="menu_item_orientation_landscape">锁定横屏</string>
+	<string name="dialog_confirm_to_exit">确定退出？</string>
+	<string name="dialog_confirm_to_remove_favorite">确定删除？</string>
+	<string name="ui_search">搜索</string>
+	<string name="ui_preference">设定</string>
+	<string name="ui_preference_general">普通</string>
+	<string name="ui_preference_favorite_auto_update">自动更新收藏夹</string>
+	<string name="ui_preference_favorite_auto_update_summary">启动时自动更新收藏夹。</string>
+	<string name="ui_preference_right_to_left_reading">从右向左阅读</string>
+	<string name="ui_preference_right_to_left_reading_summary">使用从右向左的阅读顺序。</string>
+	<string name="ui_preference_page_orientation">屏幕方向</string>
+	<string name="ui_preference_page_orientation_summary">设置观看页面时的屏幕方向。</string>
+	<string name="ui_preference_page_zoom_mode">页面缩放模式</string>
+	<string name="ui_preference_page_zoom_mode_summary">设置默认页面缩放模式。</string>
+	<string name="ui_preference_preload_pages">页面预载</string>
+	<string name="ui_preference_preload_pages_summary">设置观看页面时后台预载的页面数。</string>
+	<string name="ui_chapter_count">章节: %s</string>
+	<string name="ui_author">作者: %s</string>
+	<string name="ui_last_update">更新: %tF</string>
+	<string name="ui_last_update_countdown">更新: %s</string>
+	<string name="ui_recommend">推荐: %s</string>
+	<string name="ui_rating">评分: %s</string>
+	<string name="ui_completed">完结</string>
+	<string name="ui_is_volume">单行本</string>
+	<string name="datetime_countdown_seconts">1分钟内</string>
+	<string name="datetime_countdown_minutes">%d分钟前</string>
+	<string name="datetime_countdown_hours">%d小时前</string>
+	<string name="datetime_countdown_1day">昨天</string>
+	<string name="datetime_countdown_2day">前天</string>
+	<string name="datetime_countdown_days">%1$d月%2$d日</string>
+</resources>

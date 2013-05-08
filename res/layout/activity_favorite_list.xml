@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:baselineAligned="false">
+	<RelativeLayout android:layout_width="wrap_content"
+		android:layout_height="0.0dip" android:layout_weight="1.0">
+		<ListView android:id="@android:id/list" android:layout_width="match_parent"
+			android:layout_height="match_parent" android:fastScrollEnabled="true" />
+		<include layout="@layout/list_empty" />
+	</RelativeLayout>
+	<LinearLayout android:id="@+id/mvgUpdateBar"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:background="@drawable/bar_background" android:orientation="vertical">
+		<ImageView android:layout_width="match_parent"
+			android:layout_height="2.0dip" android:background="@color/hint_foreground_dark"
+			android:contentDescription="@string/img_desc_border" />
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:padding="4.0dip">
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:paddingLeft="2.0dip" android:paddingRight="4.0dip">
+				<TextView android:id="@+id/mtvUpdating"
+					android:layout_width="0.0dip" android:layout_height="wrap_content"
+					android:layout_weight="1.0" android:ellipsize="end"
+					android:text="@string/ui_updating_manga" android:textColor="@color/bright_foreground_dark" />
+				<TextView android:id="@+id/mtvUpdated"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:paddingLeft="5.0dip" android:text="@string/ui_updated_manga"
+					android:textColor="@color/bright_foreground_dark" android:textSize="10.0sp" />
+			</LinearLayout>
+			<ProgressBar android:id="@+id/mpbUpdate"
+				style="?android:attr/progressBarStyleHorizontal"
+				android:layout_width="match_parent" android:layout_height="1.0dip"
+				android:progress="50" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:id="@+id/mvgNewVersion"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<ImageView android:layout_width="match_parent"
+			android:layout_height="2.0dip" android:background="@color/hint_foreground_dark"
+			android:contentDescription="@string/img_desc_border" />
+		<TextView android:id="@+id/mtvNewVersion"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_margin="5.0dip" android:text="@string/ui_has_new_version_format" />
+		<Button android:id="@+id/mbtnUpdate" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:text="@string/ui_btn_update_app" />
+	</LinearLayout>
+</LinearLayout>

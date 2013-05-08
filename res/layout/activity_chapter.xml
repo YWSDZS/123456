@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent" android:layout_width="match_parent">
+	<RelativeLayout android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/mtvMessage"
+			android:layout_centerInParent="true" />
+	</RelativeLayout>
+	<com.sonyericsson.zoom.ImageZoomView
+		android:id="@+id/mivPage" android:layout_height="match_parent"
+		android:layout_width="match_parent" />
+	<ScrollView android:id="@+id/msvScroller"
+		android:layout_height="110.0dip" android:layout_width="match_parent"
+		android:clickable="false" android:background="@drawable/safe_mode_background"
+		android:layout_below="@+id/mvgTitleBar">
+		<TextView android:id="@+id/mtvDebug" android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:textAppearance="?android:textAppearanceSmall"
+			android:textColor="@color/bright_foreground_dark" android:textSize="11.0dip"
+			android:text="Debug:" />
+	</ScrollView>
+	<Button android:id="@+id/mbtnPrev" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:background="@drawable/corner_button"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true" android:layout_margin="30.0dip" />
+	<Button android:id="@+id/mbtnNext" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:background="@drawable/corner_button"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true" android:layout_margin="30.0dip" />
+	<LinearLayout android:id="@+id/mvgTitleBar"
+		android:layout_height="wrap_content" android:layout_width="match_parent"
+		android:layout_alignParentTop="true" android:orientation="horizontal"
+		android:paddingLeft="2.0dip" android:paddingRight="4.0dip"
+		android:background="@drawable/bar_background">
+		<TextView android:id="@+id/mtvTitle" android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:text="Title"
+			android:layout_weight="1.0" android:paddingLeft="2.0dip"
+			android:textColor="@color/bright_foreground_dark" android:maxLines="1"
+			android:ellipsize="marquee" android:marqueeRepeatLimit="marquee_forever"
+			android:scrollHorizontally="true" android:focusable="true"
+			android:focusableInTouchMode="true" />
+		<org.falconia.mangaproxy.ui.SystemInfo
+			android:text="DigitalClock" android:layout_height="match_parent"
+			android:layout_width="wrap_content" android:gravity="center_vertical"
+			android:textColor="@color/bright_foreground_dark"
+			android:paddingLeft="5.0dip" android:textSize="10.0sp" />
+	</LinearLayout>
+	<LinearLayout android:id="@+id/mvgStatusBar"
+		android:layout_height="wrap_content" android:layout_width="match_parent"
+		android:layout_alignParentBottom="true" android:orientation="vertical"
+		android:background="@drawable/bar_background">
+		<LinearLayout android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:orientation="horizontal"
+			android:paddingLeft="2.0dip" android:paddingRight="4.0dip">
+			<TextView android:id="@+id/mtvDownloading"
+				android:layout_height="wrap_content" android:layout_width="match_parent"
+				android:layout_alignParentBottom="true" android:text="@string/ui_downloading_page"
+				android:layout_weight="1.0" android:textColor="@color/bright_foreground_dark" />
+			<TextView android:id="@+id/mtvDownloaded"
+				android:layout_height="wrap_content" android:layout_width="wrap_content"
+				android:text="0.000KB / 0.000KB" android:textColor="@color/bright_foreground_dark"
+				android:paddingLeft="5.0dip" android:textSize="10.0sp" />
+		</LinearLayout>
+		<ProgressBar android:id="@+id/mpbDownload"
+			android:layout_height="1.0sp" android:layout_width="match_parent"
+			style="?android:attr/progressBarStyleHorizontal" android:progress="50" />
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="center" android:orientation="vertical"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<RelativeLayout android:layout_height="0dip"
+		android:layout_weight="1.0" android:layout_width="match_parent">
+		<ListView class="org.falconia.mangaproxy.ui.PinnedHeaderListView"
+			android:layout_width="match_parent" android:fastScrollEnabled="true"
+			android:id="@android:id/list" android:drawSelectorOnTop="false"
+			android:layout_height="match_parent" />
+		<include layout="@layout/list_empty" />
+	</RelativeLayout>
+	<LinearLayout android:id="@+id/mvgSearch"
+		android:orientation="horizontal" android:layout_height="wrap_content"
+		android:layout_width="match_parent" android:gravity="center"
+		android:layout_marginBottom="-10dip" android:background="@drawable/search_plate_global">
+		<EditText android:id="@+id/metSearch" android:gravity="center_vertical"
+			android:hint="@string/ui_search" android:selectAllOnFocus="true"
+			android:layout_weight="1.0" android:inputType="text"
+			android:imeOptions="actionDone" android:maxLines="1"
+			android:layout_width="0dip" android:background="@drawable/textfield_search"
+			android:layout_height="match_parent" />
+		<ImageButton android:id="@+id/mbtnSearch"
+			android:layout_width="wrap_content" android:layout_height="match_parent"
+			android:background="@drawable/btn_search_dialog" android:src="@drawable/ic_btn_search"
+			android:contentDescription="@string/ui_search" />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="center" android:orientation="vertical"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<LinearLayout android:background="@drawable/bg_blk_search_contact"
+		android:descendantFocusability="afterDescendants" android:focusable="true"
+		android:orientation="vertical" android:layout_height="64dip"
+		android:layout_width="match_parent" android:id="@+id/mvgSearch"
+		android:paddingBottom="6dip" android:paddingTop="10dip"
+		android:paddingLeft="6dip" android:paddingRight="6dip">
+				<EditText android:layout_height="0dip"
+					class="org.falconia.mangaproxy.ui.SearchEditText"
+					android:layout_weight="1.0" android:layout_width="match_parent"
+					android:drawableRight="@drawable/magnifying_glass"
+					android:maxLines="1" android:inputType="textNoSuggestions"
+					android:ellipsize="end" android:imeOptions="flagNoExtractUi"
+					android:freezesText="true" android:id="@+id/metSearch"
+					android:hint="@string/ui_search_hint" />
+	</LinearLayout>
+	<RelativeLayout android:layout_height="0dip"
+		android:layout_weight="1.0" android:layout_width="match_parent">
+		<ListView class="org.falconia.mangaproxy.ui.PinnedHeaderListView"
+			android:layout_width="match_parent" android:fastScrollEnabled="true"
+			android:id="@android:id/list" android:drawSelectorOnTop="false"
+			android:layout_height="match_parent" />
+		<include layout="@layout/list_empty" />
+	</RelativeLayout>
+</LinearLayout>

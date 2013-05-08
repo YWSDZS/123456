@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/ui_preference">
+	<PreferenceCategory android:title="@string/ui_preference_general">
+		<CheckBoxPreference android:key="bFavoriteAutoUpdate"
+			android:title="@string/ui_preference_favorite_auto_update"
+			android:summary="@string/ui_preference_favorite_auto_update_summary"
+			android:defaultValue="false" />
+		<CheckBoxPreference android:key="bRightToLeftReading"
+			android:title="@string/ui_preference_right_to_left_reading"
+			android:summary="@string/ui_preference_right_to_left_reading_summary"
+			android:defaultValue="true" android:enabled="false" />
+		<ListPreference android:key="iPageOrientation"
+			android:title="@string/ui_preference_page_orientation"
+			android:summary="@string/ui_preference_page_orientation_summary"
+			android:entries="@array/orientations" android:entryValues="@array/orientations_values"
+			android:defaultValue="4" />
+		<ListPreference android:key="iPageZoomMode"
+			android:title="@string/ui_preference_page_zoom_mode"
+			android:summary="@string/ui_preference_page_zoom_mode_summary"
+			android:entries="@array/zoom_mode" android:entryValues="@array/zoom_mode_values"
+			android:defaultValue="0" />
+		<ListPreference android:key="iPreloadPages"
+			android:title="@string/ui_preference_preload_pages"
+			android:summary="@string/ui_preference_preload_pages_summary"
+			android:entries="@array/preload" android:entryValues="@array/preload_values"
+			android:defaultValue="2" />
+	</PreferenceCategory>
+</PreferenceScreen>

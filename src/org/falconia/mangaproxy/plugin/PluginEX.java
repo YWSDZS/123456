@@ -447,11 +447,11 @@ public final class PluginEX extends PluginBase {
 			//logD(Catched_sections, groups.size() - 1);
 			//Pattern regex = Pattern.compile("<div class=\"itd1\".+?><div class=\"itd2\"><a href=\".+?org/([^<>]+?)/\">([^<>]+?)</a></div><div class=\"itd3\".+?><a href=\"([^<>\"]+?)\"><img src=\"(.+?)\"[^<>]+?></a></div>.+?<div class=\"itd4\">", Pattern.MULTILINE);
 
-			Pattern regex = Pattern.compile("<tr class=\"gtr[01]\">.+?<td class=\"itd\".+?>(.+?)</td>.+?<div class=\"it1\"><a href=\".+?org/(.+?)/\".+?</div><div class=\"it2\".+?>init(.+?)</div><div class=\"it3\">.*?<a href=\"([^<>\"]+?)\">(.+?)</a></div>.+?</tr>", Pattern.MULTILINE);
+			Pattern regex = Pattern.compile("<tr class=\"gtr[01]\">.+?<td class=\"itd\".+?>(.+?)</td>.+?<div class=\"it2\" id=\"(.+?)\".+?>init(.+?)</div><div class=\"it3\".+?>.+?</div><div class=\"it5\"><a href=\".+?org/(.+?)\".+?>(.+?)</a></div><div class=\"it4\">", Pattern.MULTILINE);
 			Matcher regexMatcher = regex.matcher(source);
 			//logD(Catched_count_in_section, matches.size(), "Mangas");
 			while (regexMatcher.find()) {
-				Manga manga = new Manga(parseId(regexMatcher.group(2)), parseName(regexMatcher.group(5)), "", getSiteId());
+				Manga manga = new Manga(parseId(regexMatcher.group(4)), parseName(regexMatcher.group(5)), "", getSiteId());
 				manga.updatedAt = parseDate(regexMatcher.group(1));
 				manga.details = "";
 				manga.author = "unknown";
@@ -514,11 +514,11 @@ public final class PluginEX extends PluginBase {
 			//logD(Catched_sections, groups.size() - 1);
 			//Pattern regex = Pattern.compile("<div class=\"itd1\".+?><div class=\"itd2\"><a href=\".+?org/([^<>]+?)/\">([^<>]+?)</a></div><div class=\"itd3\".+?><a href=\"([^<>\"]+?)\"><img src=\"(.+?)\"[^<>]+?></a></div>.+?<div class=\"itd4\">", Pattern.MULTILINE);
 
-			Pattern regex = Pattern.compile("<tr class=\"gtr[01]\">.+?<td class=\"itd\".+?>(.+?)</td>.+?<div class=\"it1\"><a href=\".+?org/(.+?)/\".+?</div><div class=\"it2\".+?>init(.+?)</div><div class=\"it3\">.*?<a href=\"([^<>\"]+?)\">(.+?)</a></div>.+?</tr>", Pattern.MULTILINE);
+			Pattern regex = Pattern.compile("<tr class=\"gtr[01]\">.+?<td class=\"itd\".+?>(.+?)</td>.+?<div class=\"it2\" id=\"(.+?)\".+?>init(.+?)</div><div class=\"it3\".+?>.+?</div><div class=\"it5\"><a href=\".+?org/(.+?)\".+?>(.+?)</a></div><div class=\"it4\">", Pattern.MULTILINE);
 			Matcher regexMatcher = regex.matcher(source);
 			//logD(Catched_count_in_section, matches.size(), "Mangas");
 			while (regexMatcher.find()) {
-				Manga manga = new Manga(parseId(regexMatcher.group(2)), parseName(regexMatcher.group(5)), "", getSiteId());
+				Manga manga = new Manga(parseId(regexMatcher.group(4)), parseName(regexMatcher.group(5)), "", getSiteId());
 				manga.updatedAt = parseDate(regexMatcher.group(1));
 				manga.details = "";
 				manga.author = "unknown";
@@ -534,7 +534,7 @@ public final class PluginEX extends PluginBase {
 			{
 				list.pageIndexMax = parseInt(groups.get(1));
 			}
-			
+
 
 			
 			//logV(Catched_in_section, groups.get(2), 2, "PageIndexMax", list.pageIndexMax);
